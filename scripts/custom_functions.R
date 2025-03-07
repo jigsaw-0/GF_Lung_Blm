@@ -94,24 +94,23 @@ RLEplot <- function(X_vst, group_colors, raw.mat = FALSE, font_size = 15, box.on
     
     # make wide-format to long-format
     RLE_long <- reshape2::melt(RLE) %>%
-        dplyr::mutate(Group = dplyr::case_when(grepl("Im-B6", Var2) ~ "IM-B6",
-                                               grepl("B6-6", Var2) ~ "B6-6",
-                                               grepl("B6-20", Var2) ~ "B6-20",
-                                               grepl("B6-27", Var2) ~ "B6-27",
-                                               grepl("B6-28", Var2) ~ "B6-28",
-                                               grepl("B6-29", Var2) ~ "B6-29",
-                                               grepl("B6-34", Var2) ~ "B6-34",
-                                               grepl("Im-129", Var2) ~ "IM-129",
-                                               grepl("129-3", Var2) ~ "129-3",
-                                               grepl("129-9", Var2) ~ "129-9",
-                                               grepl("129-10", Var2) ~ "129-10",
-                                               grepl("129-16", Var2) ~ "129-16",
-                                               grepl("129-22", Var2) ~ "129-22",
-                                               grepl("129-23", Var2) ~ "129-23"))
+        dplyr::mutate(Group = dplyr::case_when(grepl("0d_SPF", Var2) ~ "0d_SPF",
+                                               grepl("0d_GF", Var2) ~ "0d_GF",
+                                               grepl("3d_SPF_sal", Var2) ~ "3d_SPF_sal",
+                                               grepl("3d_SPF_blm", Var2) ~ "3d_SPF_blm",
+                                               grepl("3d_GF_sal", Var2) ~ "3d_GF_sal",
+                                               grepl("3d_GF_blm", Var2) ~ "3d_GF_blm",
+                                               grepl("21d_SPF_sal", Var2) ~ "21d_SPF_sal",
+                                               grepl("21d_SPF_blm", Var2) ~ "21d_SPF_blm",
+                                               grepl("21d_GF_sal", Var2) ~ "21d_GF_sal",
+                                               grepl("21d_GF_blm", Var2) ~ "21d_GF_blm"))
     
     RLE_long$Group <- factor(RLE_long$Group,
-                             levels = c("IM-B6", "B6-6", "B6-20", "B6-27", "B6-28", "B6-29", "B6-34",
-                                        "IM-129", "129-3", "129-9", "129-10", "129-16", "129-22", "129-23"))
+                             levels = c("0d_SPF", "0d_GF", 
+                                        "3d_SPF_sal", "3d_SPF_blm", 
+                                        "3d_GF_sal", "3d_GF_blm", 
+                                        "21d_SPF_sal", "21d_SPF_blm", 
+                                        "21d_GF_sal", "21d_GF_blm"))
     
     colnames(RLE_long) <- c("ENSG", "Sample", "RLE", "Group")
     test_a <<- RLE_long
