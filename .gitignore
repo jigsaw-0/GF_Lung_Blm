@@ -2,3 +2,5 @@ data/salmon_output
 .DS_Store
 .Rproj.user
 .Rprofile
+.Rhistory
+omnipathr-log/
