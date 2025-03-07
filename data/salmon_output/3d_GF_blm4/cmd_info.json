@@ -1,0 +1,11 @@
+{
+    "salmon_version": "1.10.2",
+    "index": "/data2/lsg239/Projects/reference/salmon-index",
+    "libType": "A",
+    "mates1": "/data2/lsg239/Projects/GF-Lung_blm/pipeline-Salmon/3.fastp/3d_GF_blm4-R1.fq.gz",
+    "mates2": "/data2/lsg239/Projects/GF-Lung_blm/pipeline-Salmon/3.fastp/3d_GF_blm4-R2.fq.gz",
+    "threads": "180",
+    "validateMappings": [],
+    "output": "/data2/lsg239/Projects/GF-Lung_blm/pipeline-Salmon/6.Salmon/3d_GF_blm4",
+    "auxDir": "aux_info"
+}

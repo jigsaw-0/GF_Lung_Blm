@@ -1,0 +1,22 @@
+{
+    "read_files": "[ /data2/lsg239/Projects/GF-Lung_blm/pipeline-Salmon/3.fastp/21d_GF_sal5-R1.fq.gz, /data2/lsg239/Projects/GF-Lung_blm/pipeline-Salmon/3.fastp/21d_GF_sal5-R2.fq.gz]",
+    "expected_format": "ISR",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 27951456,
+    "num_assigned_fragments": 27951456,
+    "num_frags_with_concordant_consistent_mappings": 23706713,
+    "num_frags_with_inconsistent_or_orphan_mappings": 6406291,
+    "strand_mapping_bias": 0.000009490892497377771,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 225,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 23706713,
+    "SF": 3007362,
+    "SR": 3398704,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}
